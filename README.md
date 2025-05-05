@@ -66,17 +66,17 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 
 ```plaintext
 
-Metric	            Standard AES	Modified AES
+| **Metric**         | **Standard AES** | **Modified AES** |
+|--------------------|------------------|------------------|
+| Avalanche Effect   | 48.26%           | 52.12%           |
+| Entropy            | 7.83             | 7.98             |
+| Execution Time     | 1.32 ms          | 1.44 ms          |
+| Key Variation      | Moderate         | High             |
 
-Avalanche Effect	   48.26%	       52.12%
-Entropy	                7.83	        7.98
-Execution Time	        1.32 ms     	1.44 ms
-Key Variation	       Moderate	        High
+```
 
 ✅ All major security indicators improved
 ⚠️ Minor increase in time (~9%) — acceptable trade-off for stronger diffusion.
-
-```
 
 ---
 
@@ -124,7 +124,7 @@ java tester.AvalancheEffect
 
 If you use this work in your research or projects, please cite the following paper:
 
-**bibtex**
+***bibtex***
 
 ```plaintext
 
