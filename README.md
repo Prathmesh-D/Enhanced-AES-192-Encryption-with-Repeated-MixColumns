@@ -53,8 +53,7 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 │
 ├── report/                   # Research Document
 │   └── AES_MixColumns_Research_Paper.pdf
-│
-├── requirements.txt          
+│         
 └── README.md                 # You’re reading it!
 
 ```
