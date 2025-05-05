@@ -1,8 +1,12 @@
 # 🔐 Enhanced AES with Increased MixColumns Execution
 
-This repository presents a research-based implementation and evaluation of a **modified AES algorithm** where the **MixColumns phase is executed in every round**, including the final round, to match the frequency of other core AES operations. The objective is to enhance security metrics such as **entropy**, **avalanche effect**, and **key sensitivity**.
+This repository contains a **Java-based implementation** of a modified AES algorithm in which the **MixColumns phase is executed in all rounds**, including the final round. This change aims to balance all transformation phases (SubBytes, ShiftRows, MixColumns, AddRoundKey) across the AES process for **AES-128** and **AES-192** variants.
 
-This modification is applied to **AES-128** and **AES-192**, and results are compared against standard AES implementations.
+📌 The goal is to enhance **security metrics** such as:
+- Avalanche Effect
+- Entropy
+- Key Sensitivity
+- Bit-level Diffusion
 
 ---
 
@@ -10,58 +14,46 @@ This modification is applied to **AES-128** and **AES-192**, and results are com
 
 **Title:** *Assessing the Impact of Increased MixColumns on AES Encryption Security and Performance*  
 **Authors:** Prathmesh Deshkar, Ritesh Pandey  
-**Published in:** *IJSRD, Volume 12, Issue 4*
+**Published in:** *International Journal for Scientific Research and Development (IJSRD)*  
+**Volume 12, Issue 4, July 2024*
+
+📄 Full paper available in `/report/AES_MixColumns_Research_Paper.pdf`
 
 ---
 
 ## 🧠 Motivation
 
-In standard AES, the final round **skips the MixColumns step** to improve performance. However, this can reduce diffusion in the final round. By enforcing **equal execution of MixColumns in all rounds**, this project aims to:
-
-- Increase confusion and diffusion
-- Enhance avalanche effect
-- Improve entropy and key sensitivity
-- Slightly trade off execution time for improved security
+The standard AES skips the MixColumns step in the final round, which slightly compromises diffusion. By executing MixColumns uniformly across **all rounds**, this implementation improves the cryptographic strength of the algorithm — at the cost of a marginal increase in execution time.
 
 ---
 
-## 🏗️ Project Structure
+## 📁 Project Structure
+
+```plaintext
 .
-├── src/ # AES-128 and AES-192 with modified MixColumns
-│ ├── CustomAES128.java
-│ └── CustomAES192.java
+├── src/                      # AES Implementations
+│   ├── CustomAES128.java     # Modified AES-128 with full MixColumns
+│   └── CustomAES192.java     # Modified AES-192 with full MixColumns
 │
-├── tester/ # Tester Codes
-│ ├── AvalancheEffect.java
-│ ├── BitFlipper.java
-│ ├── CipherBitFlipper.java
-│ ├── EntropyCalculator.java
-│ └── HammingDistanceCalculator.java
+├── tester/                   # Testing Modules
+│   ├── AvalancheEffect.java
+│   ├── BitFlipper.java
+│   ├── CipherBitFlipper.java
+│   ├── EntropyCalculator.java
+│   └── HammingDistanceCalculator.java
 │
-├── Result/
-│ ├── output_analysis.txt # Summary of results
-│ ├── performance_metrics.xlsx
-│ ├── graphs/
-│ │ ├── entropy_comparison.png
-│ │ ├── avalanche_effect.png
-│ │ ├── execution_time.png
-│ │ └── key_sensitivity.png
-│ └── README.md # Explanation of result contents
+├── Result/                   # Result Analysis
+│   ├── output_analysis.txt
+│   ├── performance_metrics.xlsx
+│   ├── graphs/
+│   │   ├── entropy_comparison.png
+│   │   ├── avalanche_effect.png
+│   │   ├── execution_time.png
+│   │   └── key_sensitivity.png
+│   └── README.md             # Explanation of results
 │
-├── report/
-│ └── AES_MixColumns_Research_Paper.pdf
+├── report/                   # Research Document
+│   └── AES_MixColumns_Research_Paper.pdf
 │
-├── requirements.txt
-└── README.md
-
-
-@article{Prathmesh Deshkar,
-  title={Assessing the Impact of Increased MixColumns on AES Encryption Security and Performance},
-  author={Prathmesh Deshkar and Ritesh Pandey},
-  journal={International Journal for Scientific Research and Development (IJSRD)},
-  volume={12},
-  number={4},
-  year={2024},
-  month={July}
-}
-
+├── requirements.txt          # Optional Python libraries (for plotting)
+└── README.md                 # You’re reading it!
