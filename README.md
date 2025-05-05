@@ -1,6 +1,6 @@
 # 🔐 Enhanced AES with Increased MixColumns Execution
 
-This repository contains a **Java-based implementation** of a modified AES algorithm in which the **MixColumns phase is executed in all rounds**, including the final round. This change aims to balance all transformation phases (SubBytes, ShiftRows, MixColumns, AddRoundKey) across the AES process for **AES-128** and **AES-192** variants.
+This repository contains a **Java-based implementation** of a modified AES algorithm in which the **MixColumns phase is executed in all rounds**, including the final round. This change aims to balance all transformation phases (SubBytes, ShiftRows, MixColumns, AddRoundKey) across the AES process for **AES-192** variants.
 
 📌 The goal is to enhance **security metrics** such as:
 - Avalanche Effect
@@ -31,8 +31,7 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 
 ```plaintext
 .
-├── src/                      # AES Implementations
-│   ├── CustomAES128.java     # Modified AES-128 with full MixColumns
+├── src/                      # AES Implementation
 │   └── CustomAES192.java     # Modified AES-192 with full MixColumns
 │
 ├── tester/                   # Testing Modules
@@ -46,16 +45,16 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 │   ├── output_analysis.txt
 │   ├── performance_metrics.xlsx
 │   ├── graphs/
-│   │   ├── entropy_comparison.png
 │   │   ├── avalanche_effect.png
+│   │   ├── entropy_comparison.png
 │   │   ├── execution_time.png
-│   │   └── key_sensitivity.png
+│   │   └── Hamming_Distance.png
 │   └── README.md             # Explanation of results
 │
 ├── report/                   # Research Document
 │   └── AES_MixColumns_Research_Paper.pdf
 │
-├── requirements.txt          # Optional Python libraries (for plotting)
+├── requirements.txt          
 └── README.md                 # You’re reading it!
 
 ```
@@ -71,7 +70,7 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 | Avalanche Effect   | 48.26%           | 52.12%           |
 | Entropy            | 7.83             | 7.98             |
 | Execution Time     | 1.32 ms          | 1.44 ms          |
-| Key Variation      | Moderate         | High             |
+| Hamming Distance   | 62.5%            | 71.3%            |
 
 ```
 
@@ -86,7 +85,6 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 
 ```plaintext
 
-javac src/CustomAES128.java
 javac src/CustomAES192.java
 javac tester/*.java
 
@@ -96,7 +94,7 @@ javac tester/*.java
 
 ```plaintext
 
-java src.CustomAES128
+java src.CustomAES198
 
 ```
 
