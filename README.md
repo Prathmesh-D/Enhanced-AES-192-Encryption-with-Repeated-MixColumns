@@ -57,3 +57,87 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 │
 ├── requirements.txt          # Optional Python libraries (for plotting)
 └── README.md                 # You’re reading it!
+
+```
+
+---
+
+## 🧪Results Summary
+
+```plaintext
+
+Metric	            Standard AES	Modified AES
+
+Avalanche Effect	   48.26%	       52.12%
+Entropy	                7.83	        7.98
+Execution Time	        1.32 ms     	1.44 ms
+Key Variation	       Moderate	        High
+
+✅ All major security indicators improved
+⚠️ Minor increase in time (~9%) — acceptable trade-off for stronger diffusion.
+
+```
+
+---
+
+## 🚀 Running the Project
+
+**1. Compile**
+
+```plaintext
+
+javac src/CustomAES128.java
+javac src/CustomAES192.java
+javac tester/*.java
+
+```
+
+**2. Run Example**
+
+```plaintext
+
+java src.CustomAES128
+
+```
+
+**3. Run Security Test Modules**
+
+```plaintext
+
+java tester.EntropyCalculator
+java tester.AvalancheEffect
+# etc.
+
+```
+
+---
+
+## 🛠 Technologies Used
+
+- Java 8+
+
+- Excel (for tabulation)
+
+---
+
+## 📬 Citation
+
+If you use this work in your research or projects, please cite the following paper:
+
+**bibtex**
+
+```plaintext
+
+@article{deshkar2024mixcolumns,
+  title     = {Assessing the Impact of Increased MixColumns on AES Encryption Security and Performance},
+  author    = {Prathmesh Deshkar and Ritesh Pandey},
+  journal   = {International Journal for Scientific Research and Development (IJSRD)},
+  volume    = {12},
+  number    = {4},
+  year      = {2024},
+  month     = {July}
+}
+
+```
+
+---
