@@ -116,7 +116,7 @@ java tester.AvalancheEffect
 
 - Java 8+
 
-- Excel (for tabulation)
+- Excel (for tabulation).
 
 ---
 
