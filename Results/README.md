@@ -97,7 +97,7 @@ The modified AES-192 with increased MixColumns executions demonstrates **signifi
 
 - Language: Java
 - JDK: OpenJDK 17
-- Platform: Windows 11, Intel i5-11400H, 16GB RAM
+- Platform: Windows 11, Ryzen 7 4800H, 16GB RAM
 - Test Samples: 1000 randomly generated plaintexts and keys
 - Comparison: Modified AES-192 vs Standard AES-192 (JCE implementation)
 
