@@ -75,7 +75,7 @@ The standard AES skips the MixColumns step in the final round, which slightly co
 
 ```
 
-✅ All major security indicators improved
+✅ All major security indicators improved <br>
 ⚠️ Minor increase in time (~9%) — acceptable trade-off for stronger diffusion.
 
 ---
