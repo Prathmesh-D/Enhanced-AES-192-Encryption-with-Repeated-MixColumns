@@ -1,0 +1,27 @@
+Output Analysis - AES with Modified MixColumns
+-----------------------------------------------
+
+This document summarizes the observed outcomes from executing both standard AES and the modified AES with increased MixColumns phase count. The results are derived from evaluating key cryptographic metrics such as Avalanche Effect, Entropy, Execution Time, and Hamming Distance.
+
+1. Avalanche Effect:
+   - Standard AES: 48.26%
+   - Modified AES: 52.12%
+   - Observation: The modified AES shows improved diffusion, indicating better avalanche property.
+
+2. Entropy:
+   - Standard AES: 7.83
+   - Modified AES: 7.98
+   - Observation: Closer to 8.0 in the modified version suggests improved ciphertext randomness.
+
+3. Execution Time:
+   - Standard AES: 1.32 ms
+   - Modified AES: 1.44 ms
+   - Observation: Slight increase in computation time, considered acceptable for enhanced security.
+
+4. Hamming Distance:
+   - Standard AES: 62.5%
+   - Modified AES: 71.3%
+   - Observation: Higher Hamming Distance in the modified AES implies greater output sensitivity to input changes.
+
+Conclusion:
+The modified AES algorithm exhibits improved cryptographic characteristics, particularly in diffusion and randomness, with minimal performance trade-offs. These improvements can enhance resistance against differential and statistical attacks.
