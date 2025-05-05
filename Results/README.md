@@ -110,3 +110,17 @@ The modified AES-192 with increased MixColumns executions demonstrates **signifi
 - `hamming_distance.png`: Clear improvement in diffusion characteristics
 
 ---
+
+### 🔐 Security Implications
+- Enhanced diffusion improves resistance against differential and linear cryptanalysis.
+- Better entropy ensures ciphertext patterns are unpredictable.
+- Improved sensitivity reduces vulnerability to key-related attacks.
+
+---
+
+### ⚖️ Trade-offs
+- Slightly higher execution time (~9%)
+- Non-standard AES variant; requires custom implementation
+- May increase energy consumption in constrained devices
+
+---
